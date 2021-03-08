@@ -1,8 +1,8 @@
 package com.github.thomasdarimont.training;
 
 import com.github.thomasdarimont.training.model.Todo;
-import com.github.thomasdarimont.training.model.jpa.TodoEntity;
 import com.github.thomasdarimont.training.model.TodoUpdate;
+import com.github.thomasdarimont.training.model.jpa.TodoEntity;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.transaction.Transactional;
@@ -60,5 +60,4 @@ public class TodoService {
     private Todo toTodo(TodoEntity entity) {
         return new Todo(entity.id, entity.getText(), entity.getCompleted());
     }
-
 }

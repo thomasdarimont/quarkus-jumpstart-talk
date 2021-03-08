@@ -6,8 +6,9 @@ import io.quarkus.runtime.annotations.QuarkusMain;
 
 @QuarkusMain
 public class GreetingMain implements QuarkusApplication {
+
     @Override
-    public int run(String... args) throws Exception {
+    public int run(String... args) {
         Quarkus.waitForExit();
         return 0;
     }

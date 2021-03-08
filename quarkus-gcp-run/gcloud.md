@@ -9,9 +9,11 @@ export SERVICE_NAME=quarkus-gcp
 docker build -f src/main/docker/Dockerfile.native-distroless -t $IMAGE_NAME .
 
 # Push docker image to gcp docker registry
-docker tag $IMAGE_NAME:latest $GCR_IMAGE_NAME
+docker tag $IMAGE_NAME\:latest $GCR_IMAGE_NAME
 
 docker push $GCR_IMAGE_NAME
+
+# Tested with gcloud version >= 330
 
 # Deploy service on Google Cloud Run
 gcloud beta run deploy $SERVICE_NAME \
@@ -29,4 +31,4 @@ gcloud beta run services delete $SERVICE_NAME \
   --quiet
 
 # Delete image
-gcloud beta container images delete $GCR_IMAGE_NAME  --quiet
+gcloud beta container images delete $GCR_IMAGE_NAME\:latest  --quiet

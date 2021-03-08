@@ -14,7 +14,7 @@ public class GreetingResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Greeting greet() {
-        return new Greeting("Hello ", Instant.now());
+        return new Greeting("Hello", Instant.now());
     }
 
     @Data

@@ -8,6 +8,11 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import java.time.Instant;
 
+/**
+ * See: https://quarkus.io/guides/config-reference#configuration_sources
+ *
+ * ./mvnw quarkus:generate-config
+ */
 @Path("/message")
 public class MessageResource {
 

@@ -12,7 +12,7 @@ import java.time.Instant;
 public class HelloController {
 
     @GetMapping
-    public String hello(@RequestParam String name) {
+    public String hello(@RequestParam("name") String name) {
         return String.format("Hello %s %s ", name, Instant.now());
     }
 }
